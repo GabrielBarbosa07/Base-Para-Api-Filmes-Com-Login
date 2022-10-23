@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/auth';
 import "./styles.css"
 
@@ -17,6 +18,8 @@ function LoginPage() {
         setPassword("")
     }
 
+    
+
 
     return (
         <div className="login">
@@ -29,7 +32,7 @@ function LoginPage() {
                     <input
                         type="email"
                         id="email"
-                        required
+                        
                         value={email}
                         onChange={(e) => setEmail(e.target.value)} />
                 </div>
@@ -39,13 +42,14 @@ function LoginPage() {
                     <input
                         type="password"
                         id="password"
-                        required
+                        
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} />
                 </div>
 
                 <div className="actions">
-                    <button type="submit">Entrar</button>
+                    <button type="submit"><a>Entrar</a></button>
+                    <Link className='sign' to="/register">Cadastrar-se</Link>
                 </div>
             </form>
         </div>

@@ -11,7 +11,7 @@ function HomePage() {
 
     return (
         <>
-            <h1>Home Page</h1>
+            <h1>Home Page para usuario logado</h1>
             <p>{String(authenticated)}</p>
             <button onClick={handleLogout}>Logout</button>
         </>

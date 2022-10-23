@@ -10,8 +10,9 @@ export default function Register() {
     const [confirmPassword, setConfirmPassword] = useState("");
 
     const handleRegister = () => {
-        if (password !== confirmPassword) {
+        if (email === "" || password === "" || password !== confirmPassword) {
             alert("Cê errou aí, dá uma olhada, manin");
+
         } else {
             register(userName, email, password);
         }
@@ -22,18 +23,22 @@ export default function Register() {
             <input type="text"
                 placeholder="Nome do pai"
                 value={userName}
+                required
                 onChange={(e) => setUserName(e.target.value)} />
             <input type="text"
                 placeholder="Email"
                 value={email}
+                required
                 onChange={(e) => setEmail(e.target.value)} />
             <input type="password"
                 placeholder="Senha"
                 value={password}
+                required
                 onChange={(e) => setPassword(e.target.value)} />
             <input type="password"
                 placeholder="Confirme sua senha!"
                 value={confirmPassword}
+                required
                 onChange={(e) => setConfirmPassword(e.target.value)} />
 
             <button

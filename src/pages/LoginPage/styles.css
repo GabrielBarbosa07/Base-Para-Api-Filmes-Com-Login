@@ -30,3 +30,13 @@
   text-align: center;
   margin-top: 0.5rem;
 }
+.login .actions .sign{
+  margin-left: .5rem;
+  border: #000 solid 1px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: black;
+}
+.login .actions .sign:hover{
+  background-color: rgb(242, 239, 239);
+}

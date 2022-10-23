@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
         const user = users.find(user => user.email === email && user.password === password);
 
         if (!user) {
-            console.log("senha ou email inválidos");
+            alert("Senha ou Email inválido!");
         } else {
             const loggedUser = {
                 id: user.id,
